@@ -1,0 +1,5 @@
+package com.RESngos;
+
+public class SpringBootJdbcApplication {
+
+}

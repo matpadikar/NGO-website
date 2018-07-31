@@ -1,0 +1,41 @@
+package com.RESngos.service.imp1;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.RESngos.dao.RestaurantDao;
+import com.RESngos.model.Restaurant;
+import com.RESngos.service.RestaurantService;
+
+@Service
+public class RestaurantServiceImpl implements RestaurantService {
+
+	@Autowired
+	RestaurantDao restaurantDao;
+
+	//@Override
+	public void insertRestaurant(Restaurant restaurant) {
+		restaurantDao.insertRestaurant(Restaurant);
+	}
+
+	//@Override
+	public void insertRestaurants(List<Restaurant> restaurants) {
+		restaurantDao.insertRestaurants(restaurants);
+	}
+
+	public void getAllRestaurants() {
+		List<Restaurant> employees = restaurantDao.getAllEmployees();
+		for (Restaurant restaurant : restaurants) {
+			System.out.println(restaurant.toString());
+		}
+	}
+
+	//@Override
+	public void getRestaurantById(String resId) {
+		Restaurant restaurant = restaurantDao.getRestaurantById(resId);
+		System.out.println(restaurant);
+	}
+
+}

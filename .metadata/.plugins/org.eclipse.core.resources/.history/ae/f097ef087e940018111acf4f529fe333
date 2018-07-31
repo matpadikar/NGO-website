@@ -1,0 +1,33 @@
+package com.RESngos.model;
+
+public class Restaurant {
+	private String resId;
+	private String resName;
+	private String resAddress;
+	private String resEmail;
+	private String resOwner;
+	private String resMob;
+
+	public String getResId() {
+		return resId;
+	}
+
+	public void setResId(String resId) {
+		this.resId = resId;
+	}
+
+	public String getResName() {
+		return resName;
+	}
+
+	public void setResName(String resName) {
+		this.resName = resName;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [empId=" + empId + ", empName=" + empName + "]";
+	}
+
+
+}

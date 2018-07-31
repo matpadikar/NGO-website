@@ -1,0 +1,5 @@
+package com.RESngos.dao;
+
+public class RestaurantDao {
+
+}
