@@ -1,0 +1,11 @@
+Frequently Asked Questions
+as of 5 June 2016
+==========================
+
+Q: When I download XAMPP from bw.org/ldcsql using Windows I get a message telling me that 
+the file is corrupt or invalid. 
+
+A: This is a known issue with the latest versions of Microsoft's web browsers. It flags 
+any code signed before 2016 as invalid. The file is not corrupt and you may download and 
+install it. If you wish to avoid the error message, I suggest you use Chrome or another 
+third-party browser. 
