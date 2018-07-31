@@ -1,0 +1,57 @@
+.background,
+.backdrop {
+	background-color: #3f689c;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.backdrop {
+	filter: alpha(opacity=90);
+	opacity: .9;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+}
+.background {
+	filter: blur(15px);
+	-webkit-filter: blur(10px);
+	-moz-filter: blur(5px);
+	-o-filter: blur(5px);
+	-ms-filter: blur(5px);
+	filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius=5); */
+}
+.login-form-container {
+    max-width: 400px;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -286px;
+}
+.login-form-header {
+     text-align: center;
+}
+.separator {
+    margin: 20px 0;
+    border-top: 1px solid #CCCCCC;
+    position: relative;
+}
+.separator-text {
+    display: block;
+    position: absolute;
+    top: -11px;
+    left: 50%;
+    margin-left: -22px;
+    padding: 0px 10px;
+    background: #FFFFFF;
+    color: #8a8a8a;
+}
+.socmed-login .socmed-btn {
+    padding: 10px 25px;
+    color: #8a8a8a;
+    display: block;
+    margin-top: 5px;
+    text-align: center;
+}
