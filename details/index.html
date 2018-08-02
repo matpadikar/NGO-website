@@ -4,20 +4,31 @@
 <head>
   <meta charset="utf-8">
   <title>registration form</title>
+
+
 </head>
 <center>
 
   <body>
-    <h1>REGISTER</h1>
-    <form>
-      <table width="450px">
+    <h1 style="color:rgb(153, 77, 0);" style="font-family:verdana;"  >REGISTER</h1>
+    <form action="" method="post" class="ajax">
+
+      <table width="450px" style="color:rgb(77, 77, 0)" style="font-size:20px;" style="font-family:palatino;">
+        <tr>
+          <td>
+            <label for = "type">Choose</label>
+          </td>
+          <td>
+            <input type="radio"  name="type" value="Restaurant">Restaurant
+            <input type="radio" name="type" value="NGO">NGO
+          </td>
         </tr>
         <tr>
           <td>
             <label for="first_name">Name</label>
           </td>
           <td>
-            <input type="text" name="first_name" value="Your Name" maxlength="50" size="30">
+            <input type="text" name="first_name" value="" maxlength="50" size="30">
           </td>
         </tr>
         <tr>
@@ -25,7 +36,7 @@
             <label for="restaurant_name">Restaurant Name</label>
           </td>
           <td>
-            <input type="text" name="restaurant_name" value="Restaurant Name" maxlength="50" size="30">
+            <input type="text" name="restaurant_name" value="" maxlength="50" size="30">
           </td>
         </tr>
         <tr>
@@ -33,7 +44,7 @@
             <label for="email">Email ID</label>
           </td>
           <td>
-            <input type="text" name="email" value="abc@xyz.com" maxlength="50" size="30">
+            <input type="text" name="email" value="" maxlength="50" size="30">
           </td>
         </tr>
         <tr>
@@ -41,7 +52,7 @@
             <label for="contact_number">Contact Number</label>
           </td>
           <td>
-            <input type="text" name="contact_number" value="9876543210" maxlength="50" size="30">
+            <input type="text" name="contact_number" value="" maxlength="50" size="30">
           </td>
         </tr>
         <tr>
@@ -49,17 +60,21 @@
             <label for="Address">Address</label>
           </td>
           <td>
-            <textarea name="Address" maxlength="500" cols="25" rows="6"></textarea>
+            <textarea name="Address" maxlength="500" cols="28.5" rows="6"></textarea>
           </td>
         </tr>
         <tr>
-          <td colspan = "2" style = "text-align:center">
-          <input type="submit" name="" value="submit">
+          <td colspan="2" style="text-align:center">
+            <input type="submit" name="" value="submit">
           </td>
         </tr>
       </table>
 
     </form>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
+</center>
+<br>
 
 </html>
