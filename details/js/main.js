@@ -16,7 +16,7 @@ $('form.ajax').on('submit', function() {
   $.ajax({
     url: url,
     type: type,
-    data: data,
+    data: JSON.stringify(data),
     success: function(response) {
       console.log(response);
     }
