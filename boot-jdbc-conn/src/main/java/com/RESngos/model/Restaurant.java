@@ -1,8 +1,22 @@
 package com.RESngos.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="restaurant")
 public class Restaurant {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private String resId;
+	@Column(name="resName")
 	private String resName;
+	
 	private String resAddress;
 	private String resEmail;
 	private String resOwner;
