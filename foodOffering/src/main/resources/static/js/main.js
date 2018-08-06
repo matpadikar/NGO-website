@@ -1,7 +1,8 @@
-$('form.ajax').on('submit', function() {
+$('#register').on('submit', function(event) {
   <!--console.log('Trigger')-->
   var that = $(this),
-    url = that.attr('action'),
+  	url= "foodOffering/add"
+    <!--url = that.attr('action'),-->
     type = that.attr('method'),
     data = {};
 
