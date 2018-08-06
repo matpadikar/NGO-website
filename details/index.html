@@ -3,20 +3,54 @@
 
 <head>
   <meta charset="utf-8">
-  <title>registration form</title>
+  <title>Registration form</title>
+  <link rel="icon" href="favicon.ico">
+<style>
+#bcg {
+    border: 2px solid black;
+    padding: 10px;
+    background: url(background5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+	<!-- position:static; -->
+}
 
+#ip1 {
+    border-radius: 18px;
+    border: 2px solid #000000;
+    padding: 20px; 
+    width: 300px;
+    height: 10px;    
+}
 
+#ip2 {
+    border-radius: 18px;
+     border: 2px solid #000000;
+    padding: 20px; 
+    width: 300px;
+    height: 40px;    
+}
+#ip3 {
+    border-radius: 20px;
+    background: #ffffff;
+    padding: 15px; 
+    width: 100px;
+    height: 10px;    
+}
+</style>
 </head>
 <center>
-
-  <body>
-    <h1 style="color:rgb(153, 77, 0);" style="font-family:verdana;"  >REGISTER</h1>
+<div id="bcg">
+  <body >
+  <font size="7" face="palatino" >
+    <p style="color:rgb(0,0,0);" style="font-family:verdana;" >REGISTRATION</p>
+  </font>	
     <form action="" method="post" class="ajax">
-
-      <table width="450px" style="color:rgb(77, 77, 0)" style="font-size:20px;" style="font-family:palatino;">
+      <font size="5" face="palatino" >
+      <table width="600px" style="color:rgb(255,255,255)"  >  <!-- style="font-size:200%;" style="font-family:palatino;" -->
         <tr>
           <td>
-            <label for = "type">Choose</label>
+            <label for = "type">I am a </label>
           </td>
           <td>
             <input type="radio"  name="type" value="Restaurant">Restaurant
@@ -25,10 +59,10 @@
         </tr>
         <tr>
           <td>
-            <label for="first_name">Name</label>
+            <label for="first_name">Owner Name</label>
           </td>
           <td>
-            <input type="text" name="first_name" value="" maxlength="50" size="30">
+            <input id="ip1" type="text" name="first_name" value="" maxlength="50" size="45" required>
           </td>
         </tr>
         <tr>
@@ -36,23 +70,29 @@
             <label for="restaurant_name">Restaurant Name</label>
           </td>
           <td>
-            <input type="text" name="restaurant_name" value="" maxlength="50" size="30">
+            <input id="ip1" type="text" name="restaurant_name" value="" maxlength="50" size="45" required>
           </td>
         </tr>
         <tr>
           <td>
-            <label for="email">Email ID</label>
+	<label for="email">Email ID</label>	  
+	</td>
+	<td>
+	<input type="email" required id="ip1" /> <br />
+	<!-- <input type="submit" value="Submit Now!" id="ip1"> -->
+
+           <!-- <label for="email">Email ID</label> 
           </td>
           <td>
-            <input type="text" name="email" value="" maxlength="50" size="30">
+            <input id="ip1" type="text" name="email" value="" maxlength="50" size="45">-->
           </td>
         </tr>
         <tr>
           <td>
-            <label for="contact_number">Contact Number</label>
+            <label for="contact_number" >Contact Number</label>
           </td>
           <td>
-            <input type="text" name="contact_number" value="" maxlength="50" size="30">
+            <input id="ip1" type="text" name="contact_number" value="" maxlength="50" size="45" pattern="[789][0-9]{9}" required>
           </td>
         </tr>
         <tr>
@@ -60,19 +100,35 @@
             <label for="Address">Address</label>
           </td>
           <td>
-            <textarea name="Address" maxlength="500" cols="28.5" rows="6"></textarea>
+            <textarea id = "ip2" name="Address" maxlength="500" cols="42" rows="6" required></textarea>
           </td>
         </tr>
         <tr>
           <td colspan="2" style="text-align:center">
-            <input type="submit" name="" value="submit">
+            <input id="ip3" type="submit" name="" value="Submit">
           </td>
         </tr>
       </table>
-
+      </font>
     </form>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	
+	
+	
+	
+	
+	</div>
   </body>
 </center>
 <br>
