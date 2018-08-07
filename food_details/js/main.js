@@ -46,9 +46,11 @@ $(document).ready(function(e) {
     '</div>' +
     '</div>';
 
-   $("#btnAdd").click(function(e) {
-       // $(".container").append(' ');
+  $("#btnAdd").click(function(e) {
     $(".container").append(html);
   });
-
+  $(".container").on('click', "#btnRemove", function(e) {
+    $(this).closest(".row_group").remove();
   });
+
+});
