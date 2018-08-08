@@ -10,6 +10,20 @@ import javax.persistence.Table;
 @Entity
 @Table(name="restaurant")
 public class Restaurant {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private long id;
+	@Column(name="name")
+	private String name;
+	@Column(name="email")
+	private String email;
+	@Column(name="owner")
+	private String owner;
+	@Column(name="mobile")
+	private String mob;
+	@Column(name="address")
+	private String address;
+
 	public long getId() {
 		return id;
 	}
@@ -46,19 +60,6 @@ public class Restaurant {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long id;
-	@Column(name="name")
-	private String name;
-	@Column(name="email")
-	private String email;
-	@Column(name="owner")
-	private String owner;
-	@Column(name="mobile")
-	private String mob;
-	@Column(name="address")
-	private String address;
 	
 
 }

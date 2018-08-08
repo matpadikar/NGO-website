@@ -61,15 +61,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 @Entity
-@Table(name="restaurant")
+@Table(name="restuarant")
 
 public class User implements Serializable {
 	private static final long serialVersionUID = -3009157732242241606L;
 	//private static final String name = null;
 	
 	@Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
-
+    @GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
 	    
 	    @Column(name = "name")
@@ -100,7 +99,7 @@ public class User implements Serializable {
 		}
 
 		public void setName(String name) {
-			this.name= name;
+			this.name = name;
 		}
 
 		public String getAddress() {
