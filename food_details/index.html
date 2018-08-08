@@ -4,16 +4,16 @@
 <head>
   <meta charset="utf-8">
   <title>Food Details</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="js/main.js"></script>
 </head>
 
 <body>
   <div class="container">
     <h1>Add food items</h1>
-    <form class="" action="" method="post">
+    <form class="" action="" method="post" id = "insert_form">
       <div class="form_content">
         <!--<div class="row">
           <div class="col-md-12">
@@ -27,14 +27,14 @@
           <div class="col-md-4">
             <div class="form-group">
               <label>Food Name</label>
-              <input type="text" name="food_name[]" class = "form-control">
+              <input type="text" name="food_name[]" class="form-control">
             </div>
           </div>
           <div class="col-md-2">
             <div class="form-group">
               <label>State</label>
-              <select name = "food_state" class = "form-control">
-                <option selection disabled>Please select..</option>
+              <select name="food_state[]" class="form-control">
+                <option selected>Please select..</option>
                 <option value="liquid">Liquid</option>
                 <option value="solid">Solid</option>
               </select>
@@ -43,8 +43,8 @@
           <div class="col-md-2">
             <div class="form-group">
               <label>Package</label>
-              <select name = "food_pack" class = "form-control">
-                <option selection disabled>Please select..</option>
+              <select name="food_pack[]" class="form-control">
+                <option selected>Please select..</option>
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
               </select>
@@ -53,8 +53,8 @@
           <div class="col-md-2">
             <div class="form-group">
               <label>Shelf Life</label>
-              <select name = "food_life" class = "form-control">
-                <option selection disabled>Please select..</option>
+              <select name="food_life[]" class="form-control">
+                <option selected>Please select..</option>
                 <option value="<6">Less than 6hrs</option>
                 <option value="<12">Less than 12hrs</option>
                 <option value="<18">Less than 18hrs</option>
@@ -64,12 +64,16 @@
           </div>
           <div class="col-md-2">
             <div class="form-group">
-              <button type="button" id = "btnAdd" class = "btn btn-primary">Add food</button>
+              <button type="button" id="btnAdd" class="btn btn-primary">Add food</button>
             </div>
           </div>
         </div>
       </div>
-
+      <div class="row">
+        <div class="col-md-12">
+          <button type="button" id = "submit" class="btn btn-success btn-block">Submit</button>
+        </div>
+      </div>
     </form>
   </div>
 

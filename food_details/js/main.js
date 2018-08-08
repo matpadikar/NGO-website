@@ -10,7 +10,7 @@ $(document).ready(function(e) {
     '<div class="col-md-2">' +
     '<div class="form-group">' +
     '<label>State</label>' +
-    '<select name = "food_state" class = "form-control">' +
+    '<select name = "food_state[]" class = "form-control">' +
     '<option selection disabled>Please select..</option>' +
     '<option value="liquid">Liquid</option>' +
     '<option value="solid">Solid</option>' +
@@ -20,7 +20,7 @@ $(document).ready(function(e) {
     '<div class="col-md-2">' +
     '<div class="form-group">' +
     '<label>Package</label>' +
-    '<select name = "food_pack" class = "form-control">' +
+    '<select name = "food_pack[]" class = "form-control">' +
     '<option selection disabled>Please select..</option>' +
     '<option value="yes">Yes</option>' +
     '<option value="no">No</option>' +
@@ -30,7 +30,7 @@ $(document).ready(function(e) {
     '<div class="col-md-2">' +
     '<div class="form-group">' +
     '<label>Shelf Life</label>' +
-    '<select name = "food_life" class = "form-control">' +
+    '<select name = "food_life[]" class = "form-control">' +
     '<option selection disabled>Please select..</option>' +
     '<option value="<6">Less than 6hrs</option>' +
     '<option value="<12">Less than 12hrs</option>' +
@@ -45,12 +45,36 @@ $(document).ready(function(e) {
     '</div>' +
     '</div>' +
     '</div>';
-
+var maxRows = 4;
+var x = 1;
   $("#btnAdd").click(function(e) {
-    $(".container").append(html);
+
+    if(x <= maxRows){
+    $(".form_content").append(html);
+    x++;
+  }
   });
-  $(".container").on('click', "#btnRemove", function(e) {
+  $(".form_content").on('click', "#btnRemove", function(e) {
     $(this).closest(".row_group").remove();
+    x--;
   });
+
+  $("#insert_form").on('click', "#submit", function(e){
+
+    var form_data = $("#insert_form").serialize();
+    document.write(form_data);
+    console.log(form_data);
+    $.ajax({
+      url:"",
+      method: "POST",
+      data: JSON.stringify(form_data),
+      success:function(data)
+      {
+        alert(data);
+      }
+      //console.log(data),
+    });
+  });
+
 
 });
