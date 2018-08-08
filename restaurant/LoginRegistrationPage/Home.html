@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Welcome</title>
+  <link rel="stylesheet" href="stylesheets/styles.css">
+  <link rel="icon" href="favicon.ico">
+  
+  <style>
+#bcg {
+    border: 0px solid black;
+    padding: 10px;
+    background: url(background4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+	<!-- position:static; -->
+}
+
+#ip1 {
+    border-radius: 18px;
+    border: 2px solid #000000;
+    padding: 20px; 
+    width: 300px;
+    height: 10px;    
+}
+
+#ip2 {
+    border-radius: 18px;
+     border: 2px solid #000000;
+    padding: 20px; 
+    width: 300px;
+    height: 40px;    
+}
+#ip3 {
+    border-radius: 20px;
+    background: #ffffff;
+    padding: 15px; 
+    width: 100px;
+    height: 10px;    
+}
+</style>
+
+</head>
+
+<body id="bcg">
+
+<div style="width: 100%;" >
+<marquee behavior="scroll" direction="left" scrollamount="15"><font size="8" face="palatino" > Welcome to Foodline </font></marquee>   <!--scrollamount="30"--> 
+
+ <hr />
+<center>
+   <div style="float:left; width: 50%" >
+   
+   <font size="7" face="palatino" >
+    <p style="color:rgb(0,0,0);" style="font-family:verdana;" >REGISTRATION</p>
+  </font>	
+    <form action="" method="post" class="ajax">
+      <font size="5" face="palatino" >
+      <table width="600px" style="color:rgb(255,255,255)"  >  <!-- style="font-size:200%;" style="font-family:palatino;" -->
+        <tr>
+          <td>
+            <label for = "type">I am a </label>
+          </td>
+          <td>
+            <input type="radio"  name="type" value="Restaurant">Restaurant
+            <input type="radio" name="type" value="NGO">NGO
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="first_name">Owner Name</label>
+          </td>
+          <td>
+            <input id="ip1" type="text" name="first_name" value="" maxlength="50" size="45" required>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="restaurant_name">Restaurant Name</label>
+          </td>
+          <td>
+            <input id="ip1" type="text" name="restaurant_name" value="" maxlength="50" size="45" required>
+          </td>
+        </tr>
+        <tr>
+          <td>
+	<label for="email">Email ID</label>	  
+	</td>
+	<td>
+	<input type="email" required id="ip1" /> <br />
+	<!-- <input type="submit" value="Submit Now!" id="ip1"> -->
+
+           <!-- <label for="email">Email ID</label> 
+          </td>
+          <td>
+            <input id="ip1" type="text" name="email" value="" maxlength="50" size="45">-->
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="contact_number" >Contact Number</label>
+          </td>
+          <td>
+            <input id="ip1" type="text" name="contact_number" value="" maxlength="50" size="45" pattern="[789][0-9]{9}" required>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="Address">Address</label>
+          </td>
+          <td>
+            <textarea id = "ip2" name="Address" maxlength="500" cols="42" rows="6" required></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align:center">
+            <input id="ip3" type="submit" name="" value="Submit">
+          </td>
+        </tr>
+      </table>
+      </font>
+    </form>
+	</div>
+
+	
+   
+   <div style="float:right;">
+   
+   <font size="7" face="palatino" >
+    <p style="color:rgb(0,0,0);" style="font-family:verdana;" >LOGIN</p>
+  </font>
+   	
+	<form action="" method="post" class="ajax">
+      <font size="5" face="palatino" >
+      <table width="600px" style="color:rgb(255,255,255)"  >  <!-- style="font-size:200%;" style="font-family:palatino;" -->
+        <tr>
+          <td>
+            <label for="user_name">User Name <br><font size="3" face="palatino" >Same as owner name  </font> </label>
+          </td>
+          <td>
+            <input id="ip1" type="text" name="user_name" value="" maxlength="50" size="45" required>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="password">Password</label>
+          </td>
+          <td>
+            <input id="ip1" type="text" name="password" value="" maxlength="50" size="45" required>
+          </td>
+        </tr>
+		<tr>
+          <td colspan="2" style="text-align:center">
+            <input id="ip3" type="submit" name="" value="Login">
+          </td>
+        </tr>
+		<tr>
+		<td>
+		<a style = "color:white" href=https://some.ly/1bFtVD4/> <font size="4" face="palatino" >Forgot Password  </font>  </a>
+		</td>	
+		</tr>
+		</table>
+      </font>
+    </form>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+   
+   
+	
+   </div>
+   </center>
+</div>
+<div style="clear:both"></div>
+
+
+
+
+  
+
+
+<!--
+<div style="width:100%;"> <!-- Main Div --
+<h2>Have you already</h2>
+<div style="float:left; width:20%;">
+<a href="https://www.facebook.com/login" class="socmed-btn facebook-btn">
+				<span>REGISTERED?</span>
+			</a> <!-- Set Div As your requirement --
+</div>
+<div style="float:left; width:80%; margin-left:10px;">
+ <a href="https://www.facebook.com/signup" class="socmed-btn google-btn">
+				<span>NOT REGISTERED?</span>
+			</a>  <!-- Set Div As your requirement --
+</div>
+<div>
+Login
+</div>
+</div>
+
+  <div class="login-form-container" id="login-form">
+    <div class="login-form-content">
+      <div class="login-form-header">
+        <h2>Have you already</h2>
+      </div>
+      <div class="socmed-login">
+        <a href="https://www.facebook.com/login" class="socmed-btn facebook-btn">
+				<span>REGISTERED?</span>
+			</a>
+        <div class="separator">
+          <span class="separator-text">OR</span>
+        </div>
+		
+      <a href="https://www.facebook.com/signup" class="socmed-btn google-btn">
+				<span>NOT REGISTERED?</span>
+			</a>
+      </div>
+    </div>
+  </div>
+  -->
+</body>
+
+</html>
