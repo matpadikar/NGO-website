@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>NGO Login</title>
+  <link rel="icon" href="favicon.ico">
+<style>
+#bcg {
+    border: 2px solid black;
+    padding: 10px;
+    background: url(background5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+	<!-- position:static; -->
+}
+
+#ip1 {
+    border-radius: 18px;
+    border: 2px solid #000000;
+    padding: 20px; 
+    width: 300px;
+    height: 10px;    
+}
+
+#ip2 {
+    border-radius: 18px;
+     border: 2px solid #000000;
+    padding: 20px; 
+    width: 300px;
+    height: 40px;    
+}
+#ip3 {
+    border-radius: 20px;
+    background: #ffffff;
+    padding: 15px; 
+    width: 100px;
+    height: 10px;    
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+</head>
+<center>
+
+
+
+ <body >
+ 
+ 
+ 
+ <font size="6" face="palatino" >
+    <p style="color:rgb(0,0,0);" style="font-family:verdana;" >Subscription management</p>
+  </font>
+
+      <font size="5" face="palatino" >
+	  
+
+
+
+
+
+
+<script>
+
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myObj = JSON.parse(this.responseText);
+		tableCreate(myObj);
+		//tableCreate();
+}
+};
+xmlhttp.open("GET", "DemoRestaurant.json", true);
+xmlhttp.send();
+
+function tableCreate(myObj){
+    var body = document.getElementsByTagName("body")[0];
+
+
+  var ourTable     = document.createElement("table");
+  var ourTableBody = document.createElement("tbody");
+  
+   var row = document.createElement("tr");
+	  var cell = document.createElement("td");
+      var cellText = document.createTextNode("ID number");
+      cell.appendChild(cellText);
+      row.appendChild(cell);
+	  
+	  var cell = document.createElement("td");
+      var cellText = document.createTextNode("Restaurant Name");
+      cell.appendChild(cellText);
+      row.appendChild(cell);
+	  
+	  var cell = document.createElement("td");
+      var cellText = document.createTextNode("Owner Name");
+      cell.appendChild(cellText);
+      row.appendChild(cell);
+	  
+	  var cell = document.createElement("td");
+      var cellText = document.createTextNode("Email");
+      cell.appendChild(cellText);
+      row.appendChild(cell);
+	  
+	  var cell = document.createElement("td");
+      var cellText = document.createTextNode("Contact");
+      cell.appendChild(cellText);
+      row.appendChild(cell);
+	  
+	  var cell = document.createElement("td");
+      var cellText = document.createTextNode("Address");
+      cell.appendChild(cellText);
+      row.appendChild(cell);
+	  
+	  var cell = document.createElement("td");
+      var cellText = document.createTextNode("Have you subscribed");
+      cell.appendChild(cellText);
+      row.appendChild(cell);
+	  
+	  var checkbox = document.createElement('input');
+	  checkbox.type = "checkbox";
+	  checkbox.name = "Subscribe";
+      checkbox.value = "value";
+      checkbox.id = "id";
+    
+    ourTableBody.appendChild(row);
+	
+	
+
+  for (var i = 0; i < myObj.count; i++) {
+
+    var row = document.createElement("tr");
+
+      var cell = document.createElement("td");
+      var cellText = document.createTextNode(i+1);
+      cell.appendChild(cellText);
+      row.appendChild(cell);
+
+	  
+	  var cell = document.createElement("td");
+      var cellText = document.createTextNode(myObj['restaurant'][i].RestaurantName);
+      cell.appendChild(cellText);
+      row.appendChild(cell);
+	  
+	   var cell = document.createElement("td");
+      var cellText = document.createTextNode(myObj['restaurant'][i].OwnerName);
+      cell.appendChild(cellText);
+      row.appendChild(cell);
+	  
+	  var cell = document.createElement("td");
+      var cellText = document.createTextNode(myObj['restaurant'][i].Email);
+      cell.appendChild(cellText);
+      row.appendChild(cell);
+	  
+	  var cell = document.createElement("td");
+      var cellText = document.createTextNode(myObj['restaurant'][i].Contact);
+      cell.appendChild(cellText);
+      row.appendChild(cell);
+	  
+	  var cell = document.createElement("td");
+      var cellText = document.createTextNode(myObj['restaurant'][i].Address);
+      cell.appendChild(cellText);
+      row.appendChild(cell);
+	  
+	  var cell = document.createElement("td");
+      var cellText = document.createTextNode("No");
+      cell.appendChild(cellText);
+      row.appendChild(cell);
+    
+
+
+    ourTableBody.appendChild(row);
+  }
+
+
+  ourTable.appendChild(ourTableBody);
+
+  body.appendChild(ourTable);
+
+  ourTable.setAttribute("border", "2");
+  
+};
+
+
+
+
+//  <button>Send an HTTP GET request to a page and get the result back</button>
+</script>
+
+
+        
+
+      </font>
+    
+	
+  </body>
+  
+</center>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+<!--var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+
+
+var request = new XMLHttpRequest();
+request.open('GET', requestURL);
+request.responseType = 'json';
+request.send();
+
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+
+//text += cars[i] + "<br>";
+
+
+function tableCreate(){
+    var body = document.body,
+        tbl  = document.createElement('table');
+    tbl.style.width  = '100px';
+    tbl.style.border = '1px solid black';
+
+    for(var i = 0; i < 3; i++){
+        var tr = tbl.insertRow();
+        for(var j = 0; j < 2; j++){
+            if(i == 2 && j == 1){
+                break;
+            } else {
+                var td = tr.insertCell();
+                td.appendChild(document.createTextNode('Cell'));
+                td.style.border = '1px solid black';
+                if(i == 1 && j == 1){
+                    td.setAttribute('rowSpan', '2');
+                }
+            }
+        }
+    }
+    body.appendChild(tbl);
+}
+tableCreate();
+
+var body = document.getElementsByTagName("body")[0];
+
+
+  var ourTable     = document.createElement("table");
+  var ourTableBody = document.createElement("tbody");
+
+
+  for (var i = 0; i < 4; i++) {
+
+    var row = document.createElement("tr");
+
+    for (var j = 0; j <2; j++) {
+
+
+      var cell = document.createElement("td");
+      var cellText = document.createTextNode("cell in row "+i+", column "+j);
+      cell.appendChild(cellText);
+      row.appendChild(cell);
+    }
+
+
+    ourTableBody.appendChild(row);
+  }
+
+
+  ourTable.appendChild(ourTableBody);
+
+  body.appendChild(ourTable);
+
+  ourTable.setAttribute("border", "2");
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myObj = JSON.parse(this.responseText);
+		 //document.write(myObj['restaurant'][0].OwnerName);
+		 document.getElementById("demo").innerHTML = myObj['restaurant'][0].OwnerName;
+		// document.write("\n");
+		var i;
+		
+		for (i = 0; i < myObj.count; i++) { 
+				
+		
+       document.write(myObj['restaurant'][i].OwnerName);
+		// document.getElementById("demo").innerHTML = myObj['restaurant'][i].OwnerName;
+		 document.write("\n");
+		//document.getElementById("demo1").innerHTML = myObj[i].RestaurantName;
+		//document.getElementById("demo2").innerHTML = myObj[i].Email;
+		//document.getElementById("demo3").innerHTML = myObj[i].Address;
+		//document.getElementById("demo4").innerHTML = myObj[i].Contact;
+		//document.getElementById("demo5").innerHTML = myObj['pets'][0].name;
+		}
+    }
+};
+
+xmlhttp.open("GET", "DemoRestaurant.json", true);
+xmlhttp.send();

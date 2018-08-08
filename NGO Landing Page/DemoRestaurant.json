@@ -1,0 +1,27 @@
+{
+ "count":3,
+ "restaurant":[
+ 
+    {"OwnerName":"John",
+    "RestaurantName":"Bheja Fry",
+	"Email":"sb@ptc.com",
+	"Contact":"8965328896",
+	"Address":"Weikfield, Pune 411014"
+	},
+	
+	{"OwnerName":"Mark",
+    "RestaurantName":"Shizusan",
+	"Email":"sb@ptc.com",
+	"Contact":"8965328896",
+	"Address":"Weikfield, Pune 411014"
+	},
+	
+	{"OwnerName":"Brian",
+    "RestaurantName":"Chilis",
+	"Email":"sb@ptc.com",
+	"Contact":"8965328896",
+	"Address":"Weikfield, Pune 411014"
+	}
+	
+ ]
+}
