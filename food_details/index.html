@@ -7,13 +7,15 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="stylesheet/styles.css">
   <script src="js/main.js"></script>
+
 </head>
 
 <body>
   <div class="container">
     <h1>Add food items</h1>
-    <form class="" action="" method="post" id = "insert_form">
+    <form class="" action="" method="post" id="insert_form">
       <div class="form_content">
         <!--<div class="row">
           <div class="col-md-12">
@@ -27,13 +29,13 @@
           <div class="col-md-4">
             <div class="form-group">
               <label>Food Name</label>
-              <input type="text" name="food_name[]" class="form-control">
+              <input type="text" name="food_name[]" value="" class="form-control">
             </div>
           </div>
           <div class="col-md-2">
             <div class="form-group">
               <label>State</label>
-              <select name="food_state[]" class="form-control">
+              <select name="food_state[]" value="" class="form-control">
                 <option selected>Please select..</option>
                 <option value="liquid">Liquid</option>
                 <option value="solid">Solid</option>
@@ -43,7 +45,7 @@
           <div class="col-md-2">
             <div class="form-group">
               <label>Package</label>
-              <select name="food_pack[]" class="form-control">
+              <select name="food_pack[]" value="" class="form-control">
                 <option selected>Please select..</option>
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
@@ -71,7 +73,7 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-          <button type="button" id = "submit" class="btn btn-success btn-block">Submit</button>
+          <button type="button" id="submit" class="btn btn-success btn-block">Submit</button>
         </div>
       </div>
     </form>

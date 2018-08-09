@@ -61,18 +61,52 @@ var x = 1;
 
   $("#insert_form").on('click', "#submit", function(e){
 
-    var form_data = $("#insert_form").serialize();
-    document.write(form_data);
-    console.log(form_data);
+    var food_name = [];
+    var food_state = [];
+    var food_pack = [];
+    var food_life = [];
+    data = {};
+    let restBody = [];
+    $("input[name = 'food_name[]']").each(function(){
+      food_name.push($(this).val());
+    });
+    $("select[name = 'food_state[]']").each(function(){
+      food_state.push($(this).val());
+    });
+    $("select[name = 'food_pack[]']").each(function(){
+      food_pack.push($(this).val());
+    });
+    $("select[name = 'food_life[]']").each(function(){
+      food_life.push($(this).val());
+    });
+    /*document.getElementsByName('food_state[]').forEach(function(fs){
+      food_state.push(fs.value);
+    });
+    document.getElementsByName('food_pack[]').forEach(function(fp){
+      food_pack.push(fp.value);
+    });
+    document.getElementsByName('food_life[]').forEach(function(fl){
+      food_life.push(fl.value);
+    });*/
+    for(let i =0; i<food_name.length; i++) {
+      data = new Object();
+      data.name = food_name[i];
+      data.state = food_state[i];
+      data.pack = food_pack[i];
+      data.life = food_life[i];
+      restBody.push(data);
+    }
+    //var form_data = $("#insert_form").serialize();
+    //document.write(food_name);
+    //console.log(restBody);
     $.ajax({
       url:"",
       method: "POST",
-      data: JSON.stringify(form_data),
+      data:JSON.stringify(restBody),
       success:function(data)
       {
-        alert(data);
+        alert("DOne!!");
       }
-      //console.log(data),
     });
   });
 
