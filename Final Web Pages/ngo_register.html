@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8">
+  <title>NGO Registration form</title>
+  <link rel="icon" href="favicon.ico">
+<style>
+#bcg {
+    border: 0px solid black;
+    padding: 0px;
+    background: url(background4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+	<!-- position:static; -->
+}
+
+#name {
+    border-radius: 18px;
+    border: 2px solid #000000;
+    padding: 20px;
+    width: 300px;
+    height: 10px;
+}
+
+#email {
+    border-radius: 18px;
+    border: 2px solid #000000;
+    padding: 20px;
+    width: 300px;
+    height: 10px;
+}
+
+#mobile {
+    border-radius: 18px;
+    border: 2px solid #000000;
+    padding: 20px;
+    width: 300px;
+    height: 10px;
+}
+
+#owner {
+    border-radius: 18px;
+    border: 2px solid #000000;
+    padding: 20px;
+    width: 300px;
+    height: 10px;
+}
+
+#address {
+    border-radius: 18px;
+     border: 2px solid #000000;
+    padding: 20px;
+    width: 300px;
+    height: 40px;
+}
+#submit {
+    border-radius: 20px;
+    background: #ffffff;
+    padding: 15px;
+    width: 100px;
+    height: 10px;
+}
+</style>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<center>
+<div >
+  <body id="bcg">
+  <font size="7" face="palatino" >
+    <p style="color:rgb(0,0,0);" >NGO Registration</p>
+  </font>
+  <div id="response"></div>
+    <form action="" method="post" class="ajax" id="ngo-form">
+      <font size="5" face="palatino" >
+      <table width="600px" style="color:rgb(0,0,0)"  >  <!-- style="font-size:200%;" style="font-family:palatino;" -->
+        <tr>
+        
+        </tr>
+        <tr>
+          <td>
+            <label for="owner_name">Owner Name</label>
+          </td>
+          <td>
+            <input id="owner" type="text" name="first_name" value="" maxlength="50" size="45" required>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="restaurant_name">NGO Name</label>
+          </td>
+          <td>
+            <input id="name" type="text" name="restaurant_name" value="" maxlength="50" size="45" required>
+          </td>
+        </tr>
+        <tr>
+          <td>
+	<label for="email">Email ID</label>
+	</td>
+	<td>
+	<input type="email" required id="email" /> <br />
+	</td>
+        </tr>
+        <tr>
+          <td>
+            <label for="contact_number" >Contact Number</label>
+          </td>
+          <td>
+            <input id="mobile" type="text" name="contact_number" value="" maxlength="50" size="45" pattern="[789][0-9]{9}" required>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="Address">Address</label>
+          </td>
+          <td>
+            <textarea id = "address" name="Address" maxlength="500" cols="42" rows="6" required></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align:center">
+            <input id="submit" type="submit"  name="" value="Submit">
+
+          </td>
+        </tr>
+      </table>
+      </font>
+    </form>
+
+    <script type="text/javascript"
+        src="webjars/jquery/2.2.4/jquery.min.js"></script>
+    
+    <script src="js/main1.js"></script>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+
+
+
+
+
+	</div>
+  </body>
+</center>
+<br>
+
+</html>
