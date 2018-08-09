@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    $("#register-form").submit(function (event) {
+    $("#ngo-form").submit(function (event) {
 
 
         //stop submit the form, we will post it manually.
