@@ -17,8 +17,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 //import org.springframework.web.bind.annotation.RequestParam;
 //import org.springframework.web.bind.annotation.ResponseBody;
 
+//import com.ptc.fo.model.Ngo;
 //import com.ptc.fo.bean.User;
 import com.ptc.fo.model.Restaurant;
+//import com.ptc.fo.repo.NgoRepo;
 import com.ptc.fo.repo.ResRepo;
 
 @Controller
@@ -26,6 +28,7 @@ public class WebController {
 	
 	@Autowired
 	ResRepo resRepo;
+	//NgoRepo ngoRepo;
 	
 	@ResponseBody
 	@RequestMapping(value="/res_register", method=RequestMethod.POST, consumes=MediaType.APPLICATION_JSON_VALUE)
@@ -52,5 +55,14 @@ public class WebController {
 		return response;
 	}
 	
-
+	/*@ResponseBody
+	@RequestMapping(value="/ngo_register", method=RequestMethod.POST, consumes=MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<?> registerNgo(@RequestBody Ngo n)
+	{
+		String info =String.format("User Submission:" + n);
+		System.out.println("info"+info);
+		Ngo result = ngoRepo.save(n);
+		ResponseEntity<Object> response = new ResponseEntity<Object>(result, HttpStatus.OK);
+		return response;		
+	}*/
 }

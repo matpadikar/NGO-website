@@ -1,4 +1,4 @@
-package com.ptc.fo.controller;
+/*package com.ptc.fo.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,13 +24,13 @@ public class Controller {
 	@Autowired
 	ResRepo resRepo;
 	/*List<Restaurant> res= new ArrayList<Restaurant>();*/
-	@ResponseBody
+	//@ResponseBody
 	/*@GetMapping(path="/find")
 	public ResponseEntity GetResource() {
 		ResponseEntity res = new ResponseEntity<>()
 		return res;
 		
-	}*/
+	}
 	@GetMapping("/")
 	public String getIndex() {
 		return "index";
@@ -48,4 +48,4 @@ public class Controller {
 		return ResponseEntity.ok("success");
 	}
 
-}
+}*/

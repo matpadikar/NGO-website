@@ -30,7 +30,7 @@ function register() {
     $.ajax({
         type: "POST",
         contentType: "application/json",
-        url: "/res_register",
+        url: "/ngo_register",
         data: JSON.stringify(user),
         dataType: 'json',
         cache: false,

@@ -5,17 +5,18 @@
   <meta charset="utf-8">
   <title>Registration form</title>
   <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">s
 <style>
 #bcg {
-    border: 2px solid black;
-    padding: 10px;
-    background: url(background5.jpg);
+    border: 0px solid black;
+    padding: 0px;
+    background: url(../images/background4.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 	<!-- position:static; -->
 }
 
-#ip1 {
+#name {
     border-radius: 18px;
     border: 2px solid #000000;
     padding: 20px;
@@ -23,19 +24,43 @@
     height: 10px;
 }
 
-#ip2 {
+#email {
+    border-radius: 18px;
+    border: 2px solid #000000;
+    padding: 20px;
+    width: 300px;
+    height: 10px;
+}
+
+#mobile {
+    border-radius: 18px;
+    border: 2px solid #000000;
+    padding: 20px;
+    width: 300px;
+    height: 10px;
+}
+
+#owner {
+    border-radius: 18px;
+    border: 2px solid #000000;
+    padding: 20px;
+    width: 300px;
+    height: 10px;
+}
+
+#address {
     border-radius: 18px;
      border: 2px solid #000000;
     padding: 20px;
     width: 300px;
     height: 40px;
 }
-#ip3 {
+#submit {
     border-radius: 20px;
     background: #ffffff;
-    padding: 15px;
+    padding: 10px;
     width: 100px;
-    height: 10px;
+    height: 55px;
 }
 </style>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -43,10 +68,10 @@
 
 </head>
 <center>
-<div id="bcg">
-  <body >
+<div >
+  <body id="bcg">
   <font size="7" face="palatino" >
-    <p style="color:rgb(0,0,0);" >REGISTRATION</p>
+    <p style="color:rgb(0,0,0);" >Restaurant Registration</p>
   </font>
   <div id="response"></div>
     <form action="" method="post" class="ajax" id="register-form">
@@ -108,7 +133,7 @@
     <script type="text/javascript"
         src="webjars/jquery/2.2.4/jquery.min.js"></script>
     
-    <script src="js/main.js"></script>
+    <script src="js\main.js"></script>
 	<br>
 	<br>
 	<br>
